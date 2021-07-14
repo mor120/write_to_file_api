@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    environment:
+        DATA_FILE_NAME: ${DATA_FILE_NAME}
